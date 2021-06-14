@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.softeem.mapper.DishesMapper">
+
+    <!--查询所有菜品-->
+    <resultMap id="dishes_type" type="com.softeem.domain.Dishes" autoMapping="true">
+        <!--一对一关联-->
+        <association property="dishesType" column="dishestype" javaType="com.softeem.domain.DishesType">
+            <result property="typeName" column="typeName"></result>
+
+        </association>
+        <association property="materialMap" javaType="com.softeem.domain.Material">
+            <result property="factoryOutId" column="factoryOutId"></result>
+        </association>
+    </resultMap>
+    <insert id="saveDishes" parameterType="com.softeem.domain.Dishes">
+        insert into dishes(dishesName,material,marketPrice,vipPrice,pic,`desc` ,dishesTypeId,status)
+        values (#{dishesName},#{material},#{marketPrice},#{vipPrice},#{pic},#{desc},#{dishesTypeId},1)
+    </insert>
+    <update id="delDishes" parameterType="integer">
+        update dishes set status = 0 where id = #{id}
+    </update>
+    <update id="updateDish" parameterType="com.softeem.domain.Dishes">
+        update dishes set dishesName = #{dishesName} ,material = #{material} ,marketPrice = #{marketPrice},vipPrice = #{vipPrice} ,pic = #{pic},`desc` = #{desc} ,dishesTypeId = #{dishesTypeId} where id = #{id}
+    </update>
+    <select id="findDishes" parameterType="string" resultMap="dishes_type">
+        select d.*,typeName
+        from dishes d
+        left join dishestype t on d.dishesTypeId = t.id
+        <where>
+            d.status = 1
+           <if test="_parameter!=null">
+               and dishesName like concat('%',#{searchName},'%')
+           </if>
+    </where>
+    </select>
+
+
+    <select id="findById" parameterType="integer" resultType="com.softeem.domain.Dishes">
+        select d.*,typeName from dishes d left join dishestype t on d.dishesTypeId = t.id where d.id = #{id}
+    </select>
+</mapper>

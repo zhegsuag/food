@@ -1,0 +1,35 @@
+项目：
+ 技术：
+     基于SpringBoot+Mybatis , 前端使用jsp+jQuery+bootstraps  ,
+     需对SpringIOC,beanFactory有一定了解,熟悉Servlet,
+     懂得java web项目和Spring MVC的开发流程
+     开发环境 idea或eclipse, 平台：gitee
+
+ 数据库：
+  mysql:
+            username: root
+            password: 123456
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            url: jdbc:mysql://localhost/apofood_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+            type: com.alibaba.druid.pool.DruidDataSource
+ 管理员：
+         loginName: admin
+         password: admin
+ 用户：
+         loginName: tom
+         password:  123
+ 加密技术：
+          mysql的MD5加密
+ 平台：
+         gitee
+ 链接：
+       HTTPS:  https://gitee.com/R-java/food.git
+       SSH:    git@gitee.com:R-java/food.git
+ 拓展方向：
+         食品溯源系统
+ version:
+      2021-6-5  -v
+ 修改者：
+        YellowStar/R_java_Star
+
+

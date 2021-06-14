@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.softeem.mapper.ShoppingCarMapper">
+
+    <insert id="addNewDishes" keyProperty="id" keyColumn="id" useGeneratedKeys="true" >
+        insert into shoppingcar(userId, dishesName, number, price, shoppingTime)
+        values (#{userId},#{dishesName},#{number},#{price},#{shoppingTime})
+    </insert>
+
+
+    <update id="addOldDishes" parameterType="com.softeem.domain.ShoppingCar">
+        update shoppingcar set number = #{number} , shoppingTime = #{shoppingTime} where id = #{id}
+    </update>
+
+
+    <delete id="submitOrders" parameterType="integer">
+        delete from shoppingcar where id=#{id}
+    </delete>
+
+
+    <delete id="delete" parameterType="integer">
+        delete from shoppingcar where id = #{id}
+    </delete>
+    <delete id="delAll" parameterType="integer">
+        delete from shoppingcar where userId = #{userId}
+    </delete>
+
+
+    <update id="del" parameterType="com.softeem.domain.ShoppingCar">
+        update shoppingcar set number = #{number} where id = #{id}
+    </update>
+
+    <select id="myShoppingCar" parameterType="integer" resultType="com.softeem.domain.ShoppingCar">
+       select * from shoppingcar where userId = #{userId} and number>0
+    </select>
+    <select id="reduce" resultType="com.softeem.domain.ShoppingCar">
+        select  * from shoppingcar where id = #{id}
+    </select>
+</mapper>

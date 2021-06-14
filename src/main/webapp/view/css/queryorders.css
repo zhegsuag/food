@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding: 0;
+}
+#ordermain{
+    width:1366px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    margin-top: 5%;
+}
+#tab1{
+    width:60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#tab1 tr td{
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.input{
+    height:20px;
+    line-height: 20px;
+}
+#btn{
+    width:80px;
+    height:25px;
+}
+
+
+#tab2{
+    width:100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.textsp{
+    color: red;
+}
+

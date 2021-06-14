@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.softeem.mapper.DishesTypeMapper">
+    <insert id="save" parameterType="string">
+        insert into dishestype(typeName, status) values (#{typeName},1)
+    </insert>
+    <update id="updateType">
+        update dishestype set typeName = #{typeName} where id = #{id}
+    </update>
+    <update id="delType" parameterType="integer">
+        update dishestype set status = 0 where  id = #{id}
+    </update>
+    <select id="findAll" resultType="com.softeem.domain.DishesType">
+        select * from dishestype where  status = 1
+    </select>
+</mapper>

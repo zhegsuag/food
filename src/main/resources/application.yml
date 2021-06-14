@@ -1,0 +1,56 @@
+#配置服务端口   如果不配置就是默认8080  socket 端口号范围： 0-65535   1000以下的端口最好不要使用
+#我们的socketservice   socket
+server:
+  port: 8888
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/apofood_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    type: com.alibaba.druid.pool.DruidDataSource
+#spring:
+#  datasource:
+#    username: sa
+#    password: Li805064
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#    url: jdbc:sqlserver://39.101.131.14;Database=apofood_db
+#    type: com.alibaba.druid.pool.DruidDataSource
+  mvc:
+    view:
+      prefix: /view/pages/
+      suffix: .jsp
+    static-path-pattern: /**   #配置项目下的静态资源忽略（不拦截）
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+      exclude: view
+  freemarker:
+    cache: false
+mybatis:
+  mapper-locations: classpath:com/softeem/mapper/*.xml   #配置mybatis的mapper.xml自动扫描
+  type-aliases-package: com.softeem.domain     #实体类别名
+
+
+pagehelper:
+  helper-dialect: mysql  #指定对应的数据库
+#  helper-dialect: sqlserver  #指定对应的数据库
+  reasonable: true  #分页参数的合理化
+  support-methods-arguments: true  #支持mapper接口参数传递page参数
+
+
+
+logging:
+  config: classpath:logback.xml
+  #path: D:/   #配置日志保存路径
+
+
+#springboot上传文件配置
+servlet:
+  multipart:
+    max-request-size: 10MB  #上传文件总的最大值
+    max-file-size: 10MB    #单个文件的最大值
+

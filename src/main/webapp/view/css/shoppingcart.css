@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding: 0;
+}
+#shoppingmain{
+    width:60%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    margin-top: 5%;
+}
+#shoppingmain table{
+    width:100%;
+}
+#shoppingmain table tr td,th{
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.textsp{
+    color: red;
+}
+

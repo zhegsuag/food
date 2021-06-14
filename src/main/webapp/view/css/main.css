@@ -1,0 +1,159 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+	widht:1366px;
+}
+#main{
+    width:75%;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 20px;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+/*左侧*/
+#left{
+    padding-top: 10px;
+   width:75%;
+    height:auto;
+    float: left;
+
+    overflow: hidden;
+}
+.ord{
+    padding-right: 10px;
+    width:400px;
+    float: left;
+    margin-left: 20px;
+}
+.ord{
+    overflow:hidden;
+}
+.ord dl{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ord dl dt img{
+    width:160px;
+    height: 160px;
+}
+.ord dl dt{
+     float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+.ord dl dd{
+    height: 30px;
+    line-height: 30px;
+}
+.vip{
+    color: red;
+}
+.ord p{
+    text-align: right;
+    margin-top: 10px;
+}
+/*右侧*/
+#right{
+    width:22%;
+    height: auto;
+    float: left;
+}
+.dv{
+    width:100%;
+    height: auto;
+    border: 2px #fdebd5 solid;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 10px 15px 10px 15px;
+    margin-top: 10px;
+    background-color: #fdebd5;
+    font-size: 13px;
+}
+.dv ul{
+    list-style-type: none;
+}
+.dv a{
+    text-decoration: none;
+    color:dimgray;
+}
+.dv ul li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.title{
+    color:#f59409;
+    font-weight: 700;
+    font-size: 20px;
+    float: left;
+    margin-top:7px;
+    margin-left: 10px;
+}
+.dv ul li img{
+    width:40px;
+    height: 40px;
+    float: left;
+}
+.li1{
+    border-bottom: 1px sandybrown dashed;
+    overflow: hidden;
+}
+.sp1{
+    color:#f59409
+}
+.sp2{
+    color: dimgray;
+}
+.sp3{
+    color: dimgray;
+    float: right;
+}
+
+
+
+
+
+/*li{*/
+
+    /*list-style: none;*/
+
+/*}*/
+
+/*.pagination{*/
+
+    /*margin: 50px;*/
+
+    /*background: #ccc;*/
+
+/*}*/
+
+/*.pagination  li{*/
+
+    /*float:  left;*/
+
+/*}*/
+
+/*.pagination a {*/
+
+    /*text-decoration: none;*/
+
+    /*padding: 5px 12px;*/
+
+    /*margin: 2px;*/
+
+    /*color: black;*/
+
+    /*border: 1px solid lightgray;*/
+
+/*}*/
+
+/*.pagination a:hover{*/
+
+    /*background: #CCCCCC;*/
+
+/*}*/
+

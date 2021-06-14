@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+#regmain{
+    width:60%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    margin-top: 2%;
+}
+#regmain table{
+    width:100%;
+}
+#regmain table tr td,th{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+#regmain table tr th{
+    text-align: center;
+}
+.td1{
+    text-align: right;
+}
+#regmain table span{
+    color: red;
+}
+
+.text{
+    width:200px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#btn{
+    width:100px;
+    height: 25px;
+}
+
+
+
+
+
+
